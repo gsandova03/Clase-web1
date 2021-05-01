@@ -148,7 +148,35 @@ console.log(Boolean(String(0)));
 console.log(Boolean(0));
 
 
-//
+
+
+//Operadores basicos
+
+
+//operadores unarios y binarios
+
+
+//binarios
+// +, -, /, *, ^
+
+//unarios
+//en numeros enteres no se presenta ningun cambio
+let a = 1;
+console.log(+a);
+
+
+//entonces el operador + los convierte en tipo number con su respectivo valor
+//y con - niega los valores
+// +
+console.log(+true)
+console.log(+false)
+console.log(+NaN)
+
+// -
+console.log(-true)
+console.log(-false)
+console.log(-NaN)
+
 
 // const texto = document.getElementById("texto")
 
