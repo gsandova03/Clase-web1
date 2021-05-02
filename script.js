@@ -375,7 +375,7 @@ console.log(!false);//true
 console.log(!!undefined);//false == Boolean(undefined)
 
 
-//Nullish o fusion de nulos
+//------------Nullish o fusion de nulos
 
 /*
 resultado = valor_uno || valor_dos || valor_tres
@@ -388,3 +388,105 @@ resultado = valor_uno || valor_dos || valor_tres
 a = null ?? undefined ?? undefined ?? null ?? 'hola' ?? null ?? undefined;//'hola'
 
 a = undefined ?? undefined ?? null ?? null ?? undefined;//null
+
+
+
+//-------------------Bucles
+
+//while
+let i = 0;
+
+while(i < 5){
+    console.log(`El valor de i es : ${i}` );
+    i++;
+}
+
+
+
+//--------------etiquetas en ciclos for
+
+console.log("******* Etiquetas en ciclos ********")
+
+principal:for( i = 1; i <= 10; i++){
+    for(let j = 0; j <= 10; i++){
+        console.log(`La suma de i+j es : ${i+j}`)
+        if( i==2 ) break principal;
+    }
+}
+
+console.log("Salió del ciclo")
+
+
+//---------------Funciones
+
+function holaMundo(){
+    console.log("Hola mundo")
+}
+
+holaMundo();
+
+
+//---------variable local
+
+function saludar(){
+    let nombre_per = 'Gabriel';
+    console.log(`Hola ${nombre_per}`);
+}
+
+saludar();
+
+//----------variable externa
+
+let nombre_xx = 'Gabriel';
+function saludar_nombre(){
+    let nombre_xx = 'Carlos';
+    console.log(`Nombre es: ${nombre_xx}`)
+}
+
+//Los dos resultados tiene valores diferentes, ya que dentro de la funcion se declaro una variable local en este caso con el mismo nombre
+console.log(nombre_xx);
+saludar_nombre();
+
+
+//-----------------Expresión y declaración de una función
+
+//declaracion
+
+function Hola_mundo(){
+    console.log("Hola mundo")
+}
+
+console.log(Hola_mundo);
+
+
+//expresion de una funcion 
+
+let funcion_hola = function(){
+    console.log("Hola mundo")
+}
+
+console.log(funcion_hola);
+
+
+//-----------Funciones flecha
+
+let funcion_flecha_hola = () =>{
+    console.log("Hola mundo flecha")
+}
+////--------Funcion callback
+
+
+function decidir(pregunta, si, no){
+    if(confirm(pregunta)) si()
+    else no();
+}
+
+let si = () =>{
+    alert("La persona dijo que si!!!")
+}
+
+let no = () =>{
+    alert("La persona dijo que no")
+}
+
+decidir("Quieres aprender javascript", si, no)
